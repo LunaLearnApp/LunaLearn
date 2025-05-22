@@ -8,6 +8,9 @@ import ParentSection from "@/components/ParentSection";
 import CallToAction from "@/components/CallToAction";
 import SubjectCategories from "@/components/SubjectCategories";
 import AITutorChat from "@/components/AITutorChat";
+import OfflineSupport from "@/components/OfflineSupport";
+import LanguageInclusion from "@/components/LanguageInclusion";
+import WhatsAppIntegration from "@/components/WhatsAppIntegration";
 import { Helmet } from "react-helmet";
 
 const HomePage = () => {
@@ -17,13 +20,16 @@ const HomePage = () => {
         <title>LearnWithAI - Fun Learning Games for Kids</title>
         <meta 
           name="description" 
-          content="Interactive educational games designed by education experts and powered by AI to make learning exciting for grades 1-7."
+          content="Interactive educational games designed by education experts and powered by AI to make learning exciting for grades 1-7. Featuring offline support, language inclusivity, and WhatsApp integration."
         />
       </Helmet>
       
       <Hero />
       <SubjectCategories />
       <AITutorChat />
+      <OfflineSupport />
+      <LanguageInclusion />
+      <WhatsAppIntegration />
       <Features />
       <CharacterGuides />
       <GameLibrary />
