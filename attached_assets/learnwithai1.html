@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnWithAI - Fun Learning Games for Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --primary-light: #FF9E9E;
+            --primary-dark: #FF4757;
+            --secondary: #4ECDC4;
+            --yellow: #FFD166;
+            --purple: #A78BFA;
+            --pink: #F9A8D4;
+            --blue: #7ED6DF;
+            --green: #6BD475;
+            --dark: #2A2D7E;
+            --light: #FDFFFC;
+            --card-bg: #FFFFFF;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #F8FAFF;
+            color: #2A2D7E;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fredoka One', cursive;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            color: var(--dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background-color: white;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-family: 'Fredoka One', cursive;
+            font-size: 24px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .button-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+        }
+
+        .button-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .button-outline:hover {
+            background-color: rgba(255, 107, 107, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FFEEF2 0%, #E6F9FF 100%);
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-content {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--purple) 50%, var(--blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 500px;
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-character {
+            width: 100%;
+            max-width: 400px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(167, 139, 250, 0.1) 0%, rgba(167, 139, 250, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .pattern-1 {
+            top: -300px;
+            right: -300px;
+        }
+
+        .pattern-2 {
+            bottom: -200px;
+            left: -200px;
+            background: radial-gradient(circle, rgba(126, 214, 223, 0.1) 0%, rgba(126, 214, 223, 0) 70%);
+        }
+
+        /* Features Section - Horizontal Scroller */
+        .features {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+        }
+
+        .features-scroller {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 30px 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .feature-item {
+            min-width: 300px;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: var(--light);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-description {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Characters Section - Bubble Layout */
+        .characters {
+            padding: 100px 0;
+            background-color: #F8FAFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .characters-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .character-bubble {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .character-bubble:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .character-image {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .character-name {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .character-role {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+        }
+
+        /* Games Section - Interactive Grid */
+        .games {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .game-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .game-content {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .game-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .game-description {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .game-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--yellow);
+            color: var(--dark);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* Badges Section - Trophy Case */
+        .badges {
+            padding: 100px 0;
+            background-color: #F8FAFF;
+            text-align: center;
+        }
+
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .badge-item {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .badge-item:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .badge-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+        }
+
+        .badge-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* How It Works - Timeline */
+        .how-it-works {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+            padding-right: calc(50% + 20px);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+            padding-left: calc(50% + 20px);
+            text-align: left;
+        }
+
+        .timeline-content {
+            max-width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-number {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-number {
+            right: -60px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-number {
+            left: -60px;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .timeline-description {
+            color: #666;
+            font-size: 16px;
+        }
+
+         /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background-color: #F8FAFF;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonial-card {
+            min-width: 350px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            scroll-snap-align: start;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: var(--purple);
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-logo-text {
+            font-family: 'Fredoka One', cursive;
+            font-size: 20px;
+            color: white;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Floating Shapes */
+  .floating-shape {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.2;
+    animation: float 15s ease-in-out infinite;
+  }
+
+  .shape-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  .shape-triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid var(--secondary);
+  }
+
+  .shape-square {
+    width: 100px;
+    height: 100px;
+    background: var(--yellow);
+    transform: rotate(15deg);
+  }
+
+  /* Floating animation for elements */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(50, 50);
+      opacity: 0;
+    }
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 40px rgba(255, 107, 107, 0.6);
+    }
+  }
+
+
+        .footer-links-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-link {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .copyright {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline::before {
+                left: 40px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 80px;
+                padding-right: 20px;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-number,
+            .timeline-item:nth-child(even) .timeline-number {
+                left: 20px;
+                right: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .character-bubble {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .character-bubble {
+                width: 150px;
+                height: 150px;
+            }
+
+            .character-image {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="LearnWithAI Logo">
+                <span class="logo-text">LearnWithAI</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#characters" class="nav-link">Characters</a>
+                <a href="#games" class="nav-link">Games</a>
+                <a href="#badges" class="nav-link">Badges</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+            </nav>
+            <div class="header-buttons">
+                <button class="button button-outline">Log In</button>
+                <button class="button button-primary">Sign Up Free</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-shape shape-circle" style="top: 10%; left: 5%; background: var(--purple); width: 80px; height: 80px; animation-delay: 0s;"></div>
+  <div class="floating-shape shape-triangle" style="top: 70%; left: 10%; border-bottom-color: var(--yellow); animation-delay: 1s;"></div>
+  <div class="floating-shape shape-square" style="top: 20%; right: 8%; background: var(--blue); width: 60px; height: 60px; animation-delay: 2s;"></div>
+  
+        <div class="hero-pattern pattern-1"></div>
+        <div class="hero-pattern pattern-2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Learning is fun with AI friends!</h1>
+                <p class="hero-subtitle">Our friendly AI companions make learning adventure for everyone.</p>
+                <div class="hero-buttons">
+                    <button class="button button-primary">Try for Free</button>
+                    <button class="button button-outline">How It Works</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://shorturl.at/MRorC" alt="Happy Robot" class="hero-character">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - Horizontal Scroller -->
+    <section class="features section" id="features">
+        <div class="container">
+            <h2 class="section-header">Why everyone loves LearnWithAI</h2>
+            <div class="features-scroller">
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: rgba(255, 214, 102, 0.2);">
+                        <img src="https://cdn-icons-png.flaticon.com/512/18320/18320566.png" alt="Fun Learning">
+                    </div>
+                    <h3 class="feature-title">Fun Learning</h3>
+                    <p class="feature-description">Games, stories, and interactive activities that make learning exciting and engaging.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: rgba(167, 139, 250, 0.2);">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3898/3898082.png" alt="Multilingual">
+                    </div>
+                    <h3 class="feature-title">Multilingual</h3>
+                    <p class="feature-description">Learn in English, isiZulu, Xhosa and more with our language companions.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: rgba(126, 214, 223, 0.2);">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Personalized">
+                    </div>
+                    <h3 class="feature-title">Personalized</h3>
+                    <p class="feature-description">AI that adapts to your child's learning style and progress.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: rgba(249, 168, 212, 0.2);">
+                        <img src="/home/luna/Downloads/security(1).png/home/luna/Downloads/security(1).png" alt="Safe">
+                    </div>
+                    <h3 class="feature-title">Safe Environment</h3>
+                    <p class="feature-description">Kid-friendly content with no ads or external links.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: rgba(107, 212, 117, 0.2);">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4100/4100476.png" alt="Progress">
+                    </div>
+                    <h3 class="feature-title">Track Progress</h3>
+                    <p class="feature-description">See your child's learning journey with detailed reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section - Bubble Layout -->
+    <section class="characters" id="characters">
+        <div class="container">
+            <h2 class="section-title">Meet your learning buddies</h2>
+            <div class="characters-container">
+                <div class="character-bubble" style="background-color: var(--primary);">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8213/8213476" alt="Lwazi" class="character-image">
+                    <h3 class="character-name">Lwazi</h3>
+                    <p class="character-role">Language Companion</p>
+                </div>
+                <div class="character-bubble" style="background-color: var(--purple);">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8213/8213478" alt="Thabo" class="character-image">
+                    <h3 class="character-name">Thabo</h3>
+                    <p class="character-role">Math Wizard</p>
+                </div>
+                <div class="character-bubble" style="background-color: var(--blue);">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8213/8213473" alt="Zanele" class="character-image">
+                    <h3 class="character-name">Zanele</h3>
+                    <p class="character-role">Storyteller</p>
+                </div>
+                <div class="character-bubble" style="background-color: var(--pink);">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8213/8213467" alt="Nia" class="character-image">
+                    <h3 class="character-name">Nia</h3>
+                    <p class="character-role">Safety Guide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section - Interactive Grid -->
+    <section class="games" id="games">
+        <div class="container">
+            <h2 class="section-title">🎮 Learning is a Game!</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 40px; font-size: 18px; color: #666;">
+                Explore our collection of fun educational games that make learning an adventure
+            </p>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_1280.jp" alt="Word Builder" class="game-image">
+                    <div class="game-content">
+                        <span class="game-badge">Language</span>
+                        <h3 class="game-title">Word Builder</h3>
+                        <p class="game-description">Build words from letters and learn vocabulary in multiple languages.</p>
+                        <button class="button button-outline" style="padding: 8px 16px; font-size: 14px;">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.pixabay.com/photo/2017/01/31/17/36/board-2025868_1280.jpg" alt="Math Adventure" class="game-image">
+                    <div class="game-content">
+                        <span class="game-badge">Math</span>
+                        <h3 class="game-title">Math Adventure</h3>
+                        <p class="game-description">Solve math problems to advance through exciting levels and worlds.</p>
+                        <button class="button button-outline" style="padding: 8px 16px; font-size: 14px;">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/22/21/36/board-1850116_1280.jpg" alt="Safety Quest" class="game-image">
+                    <div class="game-content">
+                        <span class="game-badge">Safety</span>
+                        <h3 class="game-title">Safety Quest</h3>
+                        <p class="game-description">Learn online safety through interactive scenarios and role-playing.</p>
+                        <button class="button button-outline" style="padding: 8px 16px; font-size: 14px;">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/22/19/07/hands-1850121_1280.jpg" alt="Story Explorer" class="game-image">
+                    <div class="game-content">
+                        <span class="game-badge">Reading</span>
+                        <h3 class="game-title">Story Explorer</h3>
+                        <p class="game-description">Choose-your-own-adventure stories in multiple languages.</p>
+                        <button class="button button-outline" style="padding: 8px 16px; font-size: 14px;">Play Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges Section - Trophy Case -->
+    <section class="badges" id="badges">
+        <div class="container">
+            <h2 class="section-title">🏆 Collect Awesome Badges!</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 40px; font-size: 18px; color: #666;">
+                Earn rewards for your learning achievements and show them off to friends
+            </p>
+            <div class="badges-container">
+                <div class="badge-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4100/4100619.png" alt="Safety Scout" class="badge-icon">
+                    <span class="badge-name">Safety Scout</span>
+                </div>
+                <div class="badge-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="AI Champion" class="badge-icon">
+                    <span class="badge-name">AI Champion</span>
+                </div>
+                <div class="badge-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4100/4100611.png" alt="Quiz Whiz" class="badge-icon">
+                    <span class="badge-name">Quiz Whiz</span>
+                </div>
+                <div class="badge-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3898/3898082.png" alt="Language Star" class="badge-icon">
+                    <span class="badge-name">Language Star</span>
+                </div>
+                <div class="badge-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Math Master" class="badge-icon">
+                    <span class="badge-name">Math Master</span>
+                </div>
+                <div class="badge-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4100/4100476.png" alt="Storyteller" class="badge-icon">
+                    <span class="badge-name">Super Storyteller</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works - Timeline -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How LearnWithAI works</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">1</div>
+                        <h3 class="timeline-title">Choose your buddy</h3>
+                        <p class="timeline-description">Pick from our friendly AI characters based on what you want to learn.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">2</div>
+                        <h3 class="timeline-title">Start playing</h3>
+                        <p class="timeline-description">Engage with fun games, stories, and activities tailored to your level.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">3</div>
+                        <h3 class="timeline-title">Earn rewards</h3>
+                        <p class="timeline-description">Collect badges and stars as you progress and learn new skills.</p>
+                    </div>
+                    </section>
+
+<!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What parents say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"My daughter was struggling with math, but since she started playing with Thabo, she's not only improved her skills but actually enjoys practicing now!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M." class="author-avatar">
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>Parent of 8-year-old</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a multilingual family, we love that our kids can learn in both English and isiZulu. The language switching is seamless and the content is culturally relevant."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David K." class="author-avatar">
+                        <div class="author-info">
+                            <h4>David K.</h4>
+                            <p>Parent of 6 and 9-year-olds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The safety lessons with Nia have been invaluable. My son now recognizes online risks and knows what to do, all through fun games he enjoys playing."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amina J." class="author-avatar">
+                        <div class="author-info">
+                            <h4>Amina J.</h4>
+                            <p>Parent of 7-year-old</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to start learning?</h2>
+            <p class="cta-subtitle">Join thousands of kids who are having fun while learning with our AI companions.</p>
+            <a href="#" class="cta-button">Try for Free - No Credit Card Needed</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="LearnWithAI Logo">
+                        <span class="footer-logo-text">LearnWithAI</span>
+                    </div>
+                    <p class="footer-description">Making learning fun and engaging for kids through friendly AI companions.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="20">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" alt="YouTube" width="20">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-links-title">Product</h3>
+                    <a href="#" class="footer-link">Features</a>
+                    <a href="#" class="footer-link">Pricing</a>
+                    <a href="#" class="footer-link">Characters</a>
+                    <a href="#" class="footer-link">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-links-title">Company</h3>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-links-title">Support</h3>
+                    <a href="#" class="footer-link">Help Center</a>
+                    <a href="#" class="footer-link">Contact Us</a>
+                    <a href="#" class="footer-link">Parents Guide</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 LearnWithAI. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<!-- Language Selector -->
+<div class="language-selector">
+  <button class="language-button">🌐</button>
+</div>
+
+<script>
+  // Progress bar
+  window.onscroll = function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  };
+
+
+  // Create floating shapes
+  function createFloatingShapes() {
+    const sections = document.querySelectorAll('.section');
+    const colors = ['#FF6B6B', '#4ECDC4', '#FFD166', '#A78BFA', '#F9A8D4', '#7ED6DF'];
+    const shapes = ['circle', 'triangle', 'square'];
+    
+    sections.forEach(section => {
+      for (let i = 0; i < 5; i++) {
+        const shape = document.createElement('div');
+        shape.classList.add('floating-shape');
+        
+        const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+        shape.classList.add(`shape-${shapeType}`);
+        
+        // Random properties
+        const size = Math.random() * 80 + 40;
+        const posX = Math.random() * 90 + 5;
+        const posY = Math.random() * 90 + 5;
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        shape.style.width = `${size}px`;
+        shape.style.height = `${size}px`;
+        shape.style.left = `${posX}%`;
+        shape.style.top = `${posY}%`;
+        shape.style.animationDuration = `${duration}s`;
+        shape.style.animationDelay = `${delay}s`;
+        shape.style.opacity = Math.random() * 0.1 + 0.05;
+        
+        if (shapeType === 'circle') {
+          shape.style.background = color;
+          shape.style.borderRadius = '50%';
+        } else if (shapeType === 'triangle') {
+          shape.style.width = '0';
+          shape.style.height = '0';
+          shape.style.borderLeft = `${size / 2}px solid transparent`;
+          shape.style.borderRight = `${size / 2}px solid transparent`;
+          shape.style.borderBottom = `${size}px solid ${color}`;
+          shape.style.background = 'transparent';
+        } else {
+          shape.style.background = color;
+          shape.style.transform = `rotate(${Math.random() * 30}deg)`;
+        }
+        
+        section.appendChild(shape);
+      }
+    });
+  }
+
+  // Initialize when page loads
+  window.onload = function() {
+    createFloatingShapes();
+  };
+
+
+    
+    // Animate elements when they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card, .bot-card, .badge-card').forEach(card => {
+      card.style.animationPlayState = 'paused';
+      observer.observe(card);
+    });
+
+</script>
