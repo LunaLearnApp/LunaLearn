@@ -11,18 +11,7 @@ const Hero = () => {
       <div className="absolute bottom-40 right-20 text-primary text-2xl">✦</div>
 
       <div className="container mx-auto px-4">
-        {/* Ratings and reviews bar similar to Buddy.ai */}
         <div className="flex justify-center items-center gap-2 mb-8">
-          <div className="flex">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <svg key={star} className="w-5 h-5 text-yellow" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-          <span className="font-fredoka text-lg">4.8</span>
-          <span className="text-gray-600 ml-2">250,000+ user reviews</span>
-          
           <div className="ml-auto">
             <Button 
               className="bg-blue hover:bg-blue/90 text-white font-bold px-6 py-2 rounded-full text-lg"
@@ -33,7 +22,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Main headline - Buddy.ai style */}
+        {/* Main headline  */}
         <div className="text-center mb-16">
           <h1 className="font-fredoka text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
             LearnWithAI helps your child 
@@ -41,7 +30,7 @@ const Hero = () => {
           </h1>
         </div>
 
-        {/* Three features section with images - similar to Buddy.ai */}
+        {/* Three features section with images */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {/* Voice-based interaction */}
           <div className="rounded-3xl overflow-hidden shadow-lg relative">

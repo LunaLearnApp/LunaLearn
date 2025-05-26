@@ -1,3 +1,4 @@
+import HeroSection from "@/components/HeroSection";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import CharacterGuides from "@/components/CharacterGuides";
@@ -17,13 +18,14 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>LearnWithAI - Fun Learning Games for Kids</title>
-        <meta 
-          name="description" 
+        <title>LunaLearn - Fun Learning Games for Kids</title>
+        <meta
+          name="description"
           content="Interactive educational games designed by education experts and powered by AI to make learning exciting for grades 1-7. Featuring offline support, language inclusivity, and WhatsApp integration."
         />
       </Helmet>
-      
+
+      <HeroSection />
       <Hero />
       <SubjectCategories />
       <AITutorChat />
