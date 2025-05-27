@@ -22,12 +22,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <Link href="/">
             <a className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 8L16 12L12 16M8 12H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <span className="font-fredoka text-2xl bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent">LearnWithAI</span>
+              <span className="font-fredoka text-2xl bg-gradient-to-r from-primary to-gray-500 bg-clip-text text-transparent">Luna Learn</span>
             </a>
           </Link>
         </div>
@@ -59,7 +54,7 @@ const Header = () => {
           </Link>
           <Link href="/dashboard">
             <Button className="bg-primary text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
-              Sign Up Free
+              Sign Up
             </Button>
           </Link>
           
@@ -94,7 +89,7 @@ const Header = () => {
                   </Link>
                   <Link href="/dashboard">
                     <Button className="w-full bg-primary text-white font-semibold">
-                      Sign Up Free
+                      Sign Up
                     </Button>
                   </Link>
                 </div>

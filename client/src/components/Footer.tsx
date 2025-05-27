@@ -73,7 +73,7 @@ const Footer = () => {
             <p className="text-gray-700 mb-4">Get weekly updates on new games and features</p>
             <form className="mb-4">
               <div className="flex">
-                <input type="email" placeholder="Your email" className="px-4 py-3 rounded-l-full w-full focus:outline-none text-dark" />
+                <input type="email" placeholder="Your email" className="px-4 py-3 rounded-l-full w-full focus:outline-none bg-gray-300 text-dark" />
                 <button type="submit" className="bg-primary px-4 py-3 rounded-r-full">
                   <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} LearnWithAI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Luna Learn. All rights reserved.</p>
         </div>
       </div>
     </footer>
