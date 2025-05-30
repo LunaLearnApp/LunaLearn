@@ -4,28 +4,30 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="pt-16 pb-20 bg-white relative overflow-hidden">
+    <section className="pt-16 pb-1 bg-white relative overflow-hidden">
       {/* Star decorations */}
       <div className="absolute top-10 right-10 text-purple text-2xl">✦</div>
       <div className="absolute top-20 left-20 text-secondary text-xl">✦</div>
       <div className="absolute bottom-40 right-20 text-primary text-2xl">✦</div>
 
+      <div className="absolute top-[45rem] left-40 text-purple-400 text-2xl">✦</div>
+      <div className="absolute top-60 right-[66rem] text-purple-400 text-xl">✦</div>
+      <div className="absolute bottom-60 right-[30rem] text-purple text-2xl">✦</div>
+      <div className="absolute top-[55rem] left-20 text-purple text-2xl">✦</div>
+
       <div className="container mx-auto px-4">
         <div className="flex justify-center items-center gap-2 mb-8">
           <div className="ml-auto">
-            <Button 
-              className="bg-blue hover:bg-blue/90 text-white font-bold px-6 py-2 rounded-full text-lg"
-              size="lg"
-            >
-              Try LearnWithAI Free
+            <Button className="bg-blue-400 text-white font-bold py-3 px-6 rounded-full shadow hover:shadow-lg transition-transform transform hover:-translate-y-1" size="lg">
+              Try Luna Learn Free
             </Button>
           </div>
         </div>
 
         {/* Main headline  */}
         <div className="text-center mb-16">
-          <h1 className="font-fredoka text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
-            LearnWithAI helps your child 
+          <h1 className="font-fredoka text-4xl text-primary md:text-5xl lg:text-6xl leading-tight mb-4">
+            Luna Learn helps your child 
             <span className="block">prepare for school</span>
           </h1>
         </div>
@@ -58,19 +60,19 @@ const Hero = () => {
                 </svg>
               </div>
               {/* Speech bubble */}
-              <div className="absolute right-4 top-8 bg-white rounded-xl p-3 shadow-lg">
-                <p className="font-comic font-bold text-xl">Hello!</p>
+              <div className="absolute top-5 right-5 bg-blue-400 text-white font-fredoka text-sm py-1 px-3 rounded-full">
+                <span>Hello!</span>
               </div>
             </div>
             <div className="p-5 bg-white">
-              <h3 className="font-fredoka text-xl mb-2">Voice-based interaction</h3>
+              <h3 className="font-fredoka text-primary text-xl mb-2">Voice-based interaction</h3>
               <p className="text-gray-600">LearnWithAI hears and responds using the latest voice recognition and AI technology.</p>
             </div>
           </div>
 
           {/* Safe learning space */}
           <div className="rounded-3xl overflow-hidden shadow-lg relative">
-            <div className="h-48 bg-gradient-to-br from-purple to-blue-300 flex items-center justify-center relative">
+            <div className="h-48 bg-gradient-to-br from-purple-300 to-blue-300 flex items-center justify-center relative">
               <div className="w-40 h-40 relative">
                 {/* Character image */}
                 <div className="w-full h-full bg-blue-400 rounded-full flex items-center justify-center overflow-hidden">
@@ -85,19 +87,19 @@ const Hero = () => {
                   </svg>
                 </div>
               </div>
-              <div className="absolute top-5 right-5 bg-pink text-white font-fredoka text-sm py-1 px-3 rounded-full">
-                SAFE SPACE
+              <div className="absolute top-5 right-5 bg-white text-blue-400 font-fredoka text-sm py-1 px-3 rounded-full">
+                <span>SAFE SPACE</span>
               </div>
             </div>
             <div className="p-5 bg-white">
-              <h3 className="font-fredoka text-xl mb-2">Safe learning space</h3>
-              <p className="text-gray-600">Ad-free with no extra charges or in-app monetization.</p>
+              <h3 className="font-fredoka text-primary text-xl mb-2">Safe learning space</h3>
+              <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, recusandae?</p>
             </div>
           </div>
 
           {/* Focus on Fun */}
           <div className="rounded-3xl overflow-hidden shadow-lg relative">
-            <div className="h-48 bg-gradient-to-br from-yellow to-orange-300 flex items-center justify-center relative">
+            <div className="h-48 bg-gradient-to-br from-yellow-100 to-orange-300 flex items-center justify-center relative">
               <div className="absolute bottom-4 right-4 bg-green w-12 h-12 rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.5 3.5C14.5 4.05228 14.0523 4.5 13.5 4.5C12.9477 4.5 12.5 4.05228 12.5 3.5C12.5 2.94772 12.9477 2.5 13.5 2.5C14.0523 2.5 14.5 2.94772 14.5 3.5Z" fill="white"/>
@@ -109,6 +111,7 @@ const Hero = () => {
                   <path d="M12 21C13.6569 21 15 19.6569 15 18C15 16.3431 13.6569 15 12 15C10.3431 15 9 16.3431 9 18C9 19.6569 10.3431 21 12 21Z" fill="white"/>
                 </svg>
               </div>
+
               <div className="w-36 h-36 relative">
                 {/* Game illustration */}
                 <div className="w-full h-full bg-white p-2 rounded-2xl shadow-lg overflow-hidden">
@@ -134,20 +137,20 @@ const Hero = () => {
               </div>
               
               {/* Speech bubble */}
-              <div className="absolute top-4 right-4 bg-white rounded-xl p-2 shadow-lg">
-                <p className="font-comic font-bold text-sm">Let's play!</p>
+              <div className="absolute top-5 right-5 bg-pink-400 text-white font-fredoka text-sm py-1 px-3 rounded-full">
+                <span>Let's play!</span>
               </div>
             </div>
             <div className="p-5 bg-white">
-              <h3 className="font-fredoka text-xl mb-2">Focus on Fun</h3>
+              <h3 className="font-fredoka text-primary text-xl mb-2">Focus on Fun</h3>
               <p className="text-gray-600">Game-based lessons to keep kids learning longer.</p>
             </div>
           </div>
         </div>
 
         {/* Grade Level Selector moved below the features */}
-        <div className="bg-light rounded-3xl p-8 shadow-lg mb-12">
-          <h2 className="font-fredoka text-3xl text-center mb-6">Choose your grade level</h2>
+        <div className="bg-pink-200 rounded-3xl p-8 shadow-lg mb-12">
+          <h2 className="font-fredoka text-primary text-3xl text-center mb-6">Choose your level</h2>
           <div className="flex justify-center">
             <GradeLevelSelector />
           </div>

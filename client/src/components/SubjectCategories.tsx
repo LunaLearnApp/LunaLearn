@@ -17,6 +17,19 @@ const SubjectCategories = () => {
       ]
     },
     {
+      id: 'technology',
+      name: 'Technology',
+      color: 'bg-green-400',
+      textColor: 'text-green-800',
+      borderColor: 'border-green-300',
+      children: [
+        { id: 'problem', name: 'Problem Solving', color: 'bg-green-500' },
+        { id: 'code', name: 'Programming', color: 'bg-green-400' },
+        { id: 'computer', name: 'Computers', color: 'bg-green-300' },
+        { id: 'internet', name: 'Internet', color: 'bg-green-300' }
+      ]
+    },
+    {
       id: 'communication',
       name: 'Communication',
       color: 'bg-blue-400',
@@ -45,11 +58,11 @@ const SubjectCategories = () => {
   return (
     <section className="py-16 bg-light">
       <div className="container mx-auto px-4">
-        <h2 className="font-fredoka text-4xl text-center mb-10">
+        <h2 className="font-fredoka text-4xl text-center text-primary mb-10">
           Master the building blocks of early education
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Map through main subject categories */}
           {subjects.map((subject) => (
             <div key={subject.id} className="flex flex-col space-y-4">
@@ -87,7 +100,7 @@ const SubjectCategories = () => {
           </h3>
           
           <p className="text-gray-700 text-lg text-center mb-6">
-            LearnWithAI offers programs based on educational standards for grades 1-7
+            Luna Learn offers programs based on educational standards for grades 1-7
           </p>
           
           {/* Character journey - like Buddy.ai progression */}

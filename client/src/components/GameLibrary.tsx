@@ -39,13 +39,13 @@ const GameLibrary = () => {
   const subjects = ["all", "math", "science", "reading", "social studies"];
   const grades = [
     { id: null, label: "All" },
-    { id: 0, label: "K" },
-    { id: 1, label: "1" },
-    { id: 2, label: "2" },
-    { id: 3, label: "3" },
-    { id: 4, label: "4" },
-    { id: 5, label: "5" },
-    { id: 6, label: "6" }
+    { id: 0, label: "1" },
+    { id: 1, label: "2" },
+    { id: 2, label: "3" },
+    { id: 3, label: "4" },
+    { id: 4, label: "5" },
+    { id: 5, label: "6" },
+    { id: 6, label: "7" }
   ];
 
   return (

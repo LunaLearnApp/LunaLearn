@@ -19,12 +19,10 @@ const WhatsAppIntegration = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
-            <h2 className="font-fredoka text-4xl mb-6">
+            <h2 className="font-fredoka text-4xl text-primary mb-6">
               Learn Anywhere with WhatsApp
             </h2>
-            <p className="text-gray-700 mb-8">
-              Access educational content through WhatsApp, a platform already widely used in communities 
-              around the world. Our chatbot delivers engaging learning experiences right to your mobile phone.
+            <p className="text-gray-700 mb-8">Access fun, educational content through the familiar WhatsApp app. Our chatbot delivers engaging learning games and activities right to your child's mobile device. Bring the power of personalized, AI-powered education to your family anytime, anywhere.
             </p>
             
             <div className="space-y-6 mb-8">
@@ -35,7 +33,7 @@ const WhatsAppIntegration = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-fredoka text-xl mb-1">24/7 Learning Support</h3>
+                  <h3 className="font-fredoka text-primary mb-1">24/7 Learning Support</h3>
                   <p className="text-gray-600">
                     Get homework help, explore new topics, or practice your skills anytime, anywhere 
                     through simple WhatsApp messages.
@@ -50,7 +48,7 @@ const WhatsAppIntegration = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-fredoka text-xl mb-1">Minimal Data Usage</h3>
+                  <h3 className="font-fredoka text-primary mb-1">Minimal Data Usage</h3>
                   <p className="text-gray-600">
                     Our WhatsApp chatbot is designed to use minimal data, making it accessible 
                     even with limited internet plans.
@@ -65,7 +63,7 @@ const WhatsAppIntegration = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-fredoka text-xl mb-1">Multilingual Support</h3>
+                  <h3 className="font-fredoka text-primary mb-1">Multilingual Support</h3>
                   <p className="text-gray-600">
                     Interact with our chatbot in multiple languages, including South African 
                     languages like isiZulu, isiXhosa, and more.

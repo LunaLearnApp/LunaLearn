@@ -26,8 +26,8 @@ const GradeLevelSelector = ({ onGradeSelect }: GradeLevelSelectorProps) => {
   ];
 
   return (
-    <div className="bg-white p-4 rounded-2xl shadow-lg w-fit">
-      <p className="font-bold text-dark mb-3">Choose Your Grade:</p>
+    <div className="bg-blue-300 p-6 rounded-2xl shadow-lg w-fit">
+      <p className="font-bold text-blue-700 text-center mb-3">Choose Your Level:</p>
       <div className="flex flex-wrap gap-3">
         {grades.map((grade) => (
           <button
@@ -36,7 +36,7 @@ const GradeLevelSelector = ({ onGradeSelect }: GradeLevelSelectorProps) => {
               "w-12 h-12 rounded-full font-fredoka shadow-md hover:shadow-lg transition-all hover:-translate-y-1",
               selectedGrade === grade.id 
                 ? getGradeColor(grade.id)
-                : "bg-gray-200 text-dark hover:" + getGradeColor(grade.id).replace("bg-", "hover:bg-")
+                : "bg-blue-400 hover:" + getGradeColor(grade.id).replace("bg-", "hover:bg-")
             )}
             onClick={() => handleGradeClick(grade.id)}
           >

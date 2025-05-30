@@ -57,9 +57,7 @@ export const CharacterDetail = ({ character }: CharacterDetailProps) => {
             })}
           </div>
           <Link href={`/games?character=${character.id}`}>
-            <Button 
-              className={`${character.color} text-white font-bold px-6 py-3 rounded-full shadow hover:shadow-lg transition-all hover:-translate-y-1 duration-300`}
-            >
+            <Button className={`${character.color} text-white font-bold px-6 py-3 rounded-full shadow hover:shadow-lg transition-all hover:-translate-y-1 duration-300`}>
               Learn with {character.name}
             </Button>
           </Link>
