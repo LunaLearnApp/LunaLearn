@@ -26,10 +26,10 @@ const AchievementsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Achievements | LearnWithAI</title>
+        <title>Achievements | LunaLearn</title>
         <meta 
           name="description" 
-          content="Track your learning achievements, badges, and progress on LearnWithAI"
+          content="Track your learning achievements, badges, and progress on LunaLearn"
         />
       </Helmet>
       

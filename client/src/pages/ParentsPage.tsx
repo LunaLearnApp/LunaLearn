@@ -26,7 +26,7 @@ const ParentsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Parent Dashboard | LearnWithAI</title>
+        <title>Parent Dashboard | LunaLearn</title>
         <meta 
           name="description" 
           content="Monitor your child's learning progress, set limits, and view detailed reports."

@@ -16,7 +16,7 @@ const ParentSection = () => {
           <div className="md:w-1/2">
             <span className="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-bold text-sm inline-block mb-4">FOR PARENTS</span>
             <h2 className="font-fredoka text-4xl mb-6">Stay Connected With Your Child's Learning Journey</h2>
-            <p className="text-gray-600 mb-8">LearnWithAI provides parents with detailed insights into their child's educational progress. Monitor activity, set learning goals, and receive regular reports on achievements.</p>
+            <p className="text-gray-600 mb-8">LunaLearn provides parents with detailed insights into their child's educational progress. Monitor activity, set learning goals, and receive regular reports on achievements.</p>
             
             <div className="space-y-4 mb-8">
               {parentFeatures.map((feature, index) => (
@@ -45,7 +45,7 @@ const ParentSection = () => {
           <div className="md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2340&auto=format&fit=crop"
-              alt="Parent and child using LearnWithAI together" 
+              alt="Parent and child using LunaLearn together" 
               className="rounded-3xl shadow-xl"
             />
           </div>

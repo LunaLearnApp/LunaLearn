@@ -43,10 +43,6 @@ const GameCard = ({ game }: GameCardProps) => {
           <div className="p-6">
             <div className="flex justify-between items-center mb-3">
               <h3 className="font-fredoka text-xl">{game.title}</h3>
-              <div className="flex items-center">
-                <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                <span className="ml-1 font-bold">{game.rating.toFixed(1)}</span>
-              </div>
             </div>
             <p className="text-gray-600 mb-4">{game.description}</p>
             <div className="flex justify-between items-center">

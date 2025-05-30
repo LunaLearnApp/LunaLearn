@@ -86,7 +86,7 @@ const GameDetailPage = () => {
   return (
     <>
       <Helmet>
-        <title>{game.title} | LearnWithAI Games</title>
+        <title>{game.title} | LunaLearn Games</title>
         <meta 
           name="description" 
           content={game.description}
@@ -117,10 +117,6 @@ const GameDetailPage = () => {
                     <Badge className={getSubjectColor(game.subject)}>
                       {game.subject}
                     </Badge>
-                    <div className="flex items-center">
-                      <Star className="w-5 h-5 text-yellow fill-current" />
-                      <span className="ml-1 font-bold">{game.rating.toFixed(1)}</span>
-                    </div>
                   </div>
                   
                   <div className="flex items-center gap-3 mb-4">
