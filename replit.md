@@ -1,8 +1,8 @@
-# LearnWithAI - Educational Games Platform
+# LunaLearn - Educational Games Platform
 
 ## Overview
 
-LearnWithAI is an educational platform providing interactive games for children in grades K-6. The application features a React-based frontend with a modern UI, an Express backend API, and uses Drizzle ORM for database interactions. The platform includes game recommendations, achievements/badges, character guides, and progress tracking for young learners.
+LunaLearn is an educational platform providing interactive games for children in grades K-6. The application features a React-based frontend with a modern UI, an Express backend API, and uses Drizzle ORM for database interactions. The platform includes game recommendations, achievements/badges, character guides, and progress tracking for young learners.
 
 ## User Preferences
 

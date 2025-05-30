@@ -6,7 +6,6 @@ export interface Game {
   minGrade: number;
   maxGrade: number;
   imageUrl?: string;
-  rating: number;
   durationMinutes: number;
 }
 

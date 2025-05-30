@@ -19,7 +19,6 @@ export const games = pgTable("games", {
   minGrade: integer("min_grade").notNull(),
   maxGrade: integer("max_grade").notNull(),
   imageUrl: text("image_url"),
-  rating: integer("rating").default(0).notNull(),
   durationMinutes: integer("duration_minutes").notNull(),
 });
 

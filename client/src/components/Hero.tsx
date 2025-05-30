@@ -66,7 +66,7 @@ const Hero = () => {
             </div>
             <div className="p-5 bg-white">
               <h3 className="font-fredoka text-primary text-xl mb-2">Voice-based interaction</h3>
-              <p className="text-gray-600">LearnWithAI hears and responds using the latest voice recognition and AI technology.</p>
+              <p className="text-gray-600">LunaLearn hears and responds using the latest voice recognition and AI technology.</p>
             </div>
           </div>
 

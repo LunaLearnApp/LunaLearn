@@ -71,10 +71,10 @@ export function getGradeColor(grade: number) {
  */
 export function getSubjectColor(subject: string) {
   switch(subject.toLowerCase()) {
-    case "math": return "bg-[#FFD166] text-dark";
-    case "science": return "bg-[#7ED6DF] text-white";
-    case "reading": return "bg-[#F9A8D4] text-white";
-    case "social studies": return "bg-[#A78BFA] text-white";
+    case "academics": return "bg-blue-400 text-dark";
+    case "technology": return "bg-purple-400 text-white";
+    case "communication": return "bg-pink-400 text-white";
+    case "creativity": return "bg-green-400 text-white";
     default: return "bg-[#6BD475] text-white";
   }
 }

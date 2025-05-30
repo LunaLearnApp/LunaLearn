@@ -1,83 +1,323 @@
 import { SVGProps } from "react";
 
-export const MathIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="12" cy="12" r="10" fill="#FFD166" />
-    <path d="M8 8L16 16" stroke="#2A2D7E" strokeWidth="2" strokeLinecap="round" />
-    <path d="M16 8L8 16" stroke="#2A2D7E" strokeWidth="2" strokeLinecap="round" />
+export const NumberBlastIcon = ({
+  size = 128, // bigger default size
+  ...props
+}: { size?: number } & SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 90 90"
+    width={size}
+    height={size}
+    {...props}
+  >
+    {/* Bright yellow explosion base */}
+    <path
+      d="M32 12L40 24L52 28L40 32L32 44L24 32L12 28L24 24Z"
+      fill="#FFD700"
+      stroke="#FF9800"
+      strokeWidth="2"
+    />
+
+    {/* Cartoon explosion particles */}
+    <circle cx="10" cy="15" r="3" fill="#FF5722" />
+    <circle cx="54" cy="12" r="4" fill="#FF5722" />
+    <circle cx="15" cy="50" r="3.5" fill="#FF5722" />
+    <circle cx="50" cy="52" r="3" fill="#FF5722" />
+
+    {/* Flying numbers with wobbly motion lines */}
+    <g className="flying-numbers">
+      <text
+        x="20"
+        y="25"
+        fontFamily="'Comic Sans MS', cursive, sans-serif"
+        fontWeight="bold"
+        fontSize="14"
+        fill="#4285F4"
+      >
+        5
+      </text>
+      <path
+        d="M25 28Q30 20 35 22"
+        fill="none"
+        stroke="#4285F4"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+
+      <text
+        x="45"
+        y="20"
+        fontFamily="'Comic Sans MS', cursive, sans-serif"
+        fontWeight="bold"
+        fontSize="16"
+        fill="#EA4335"
+      >
+        8
+      </text>
+      <path
+        d="M42 23Q48 15 50 18"
+        fill="none"
+        stroke="#EA4335"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+
+      <text
+        x="15"
+        y="45"
+        fontFamily="'Comic Sans MS', cursive, sans-serif"
+        fontWeight="bold"
+        fontSize="18"
+        fill="#34A853"
+      >
+        12
+      </text>
+      <path
+        d="M20 42Q10 35 12 38"
+        fill="none"
+        stroke="#34A853"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </g>
+
+    {/* Big friendly plus sign at center */}
+    <rect x="28" y="20" width="8" height="24" rx="2" fill="#FFFFFF" />
+    <rect x="20" y="28" width="24" height="8" rx="2" fill="#FFFFFF" />
+
+    {/* Sparkle effects */}
+    <path
+      d="M32 5L34 10L39 10L35 14L37 19L32 16L27 19L29 14L25 10L30 10Z"
+      fill="#FFEB3B"
+    />
+    <path
+      d="M60 32L55 34L55 39L59 35L64 37L61 32L64 27L59 29L55 25L55 30Z"
+      fill="#FFEB3B"
+    />
   </svg>
 );
 
-export const ScienceIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="12" cy="12" r="10" fill="#7ED6DF" />
-    <path d="M10 7V13C10 14.6569 8.65685 16 7 16V16" stroke="#2A2D7E" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M14 7V13C14 14.6569 15.3431 16 17 16V16" stroke="#2A2D7E" strokeWidth="1.5" strokeLinecap="round" />
-    <rect x="9" y="5" width="6" height="2" rx="1" fill="#2A2D7E" />
+export const CodeWizardsIcon = ({
+  size = 128,
+  ...props
+}: { size?: number } & SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 90 90"
+    width={size}
+    height={size}
+    {...props}
+  >
+    {/* Monitor frame */}
+    <rect
+      x="15"
+      y="20"
+      width="60"
+      height="40"
+      rx="4"
+      fill="#1A1A2E"
+      stroke="#0F3460"
+      strokeWidth="3"
+    />
+
+    {/* Screen content - code lines */}
+    <rect x="25" y="30" width="40" height="6" rx="1" fill="#00FFAB" />
+    <rect x="25" y="40" width="30" height="6" rx="1" fill="#008F7A" />
+    <rect x="25" y="50" width="45" height="6" rx="1" fill="#00FFAB" />
+
+    {/* Curly braces on sides */}
+    <path
+      d="M18 30 L22 35 L18 40 L22 45 L18 50"
+      stroke="#00FFAB"
+      strokeWidth="4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M72 30 L68 35 L72 40 L68 45 L72 50"
+      stroke="#00FFAB"
+      strokeWidth="4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* Circuit lines below monitor */}
+    <line
+      x1="30"
+      y1="65"
+      x2="60"
+      y2="65"
+      stroke="#008F7A"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+    <circle cx="30" cy="65" r="3" fill="#00FFAB" />
+    <circle cx="60" cy="65" r="3" fill="#00FFAB" />
+
+    {/* Binary code digits floating */}
+    <text
+      x="20"
+      y="15"
+      fontFamily="'Courier New', monospace"
+      fontWeight="bold"
+      fontSize="14"
+      fill="#00FFAB"
+    >
+      1010
+    </text>
+    <text
+      x="55"
+      y="15"
+      fontFamily="'Courier New', monospace"
+      fontWeight="bold"
+      fontSize="14"
+      fill="#008F7A"
+    >
+      0110
+    </text>
   </svg>
 );
 
-export const ReadingIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="12" cy="12" r="10" fill="#F9A8D4" />
-    <rect x="6" y="7" width="12" height="10" rx="1" fill="white" />
-    <path d="M8 10H16" stroke="#2A2D7E" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M8 12H16" stroke="#2A2D7E" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M8 14H13" stroke="#2A2D7E" strokeWidth="1.5" strokeLinecap="round" />
+export const WordHeroesIcon = ({
+  size = 128,
+  ...props
+}: { size?: number } & SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    width={size}
+    height={size}
+    {...props}
+  >
+    {/* Hero emblem shape */}
+    <path
+      d="M32 12L50 32L32 52L14 32Z"
+      fill="#F9A8D4"
+      stroke="#2A2D7E"
+      strokeWidth="2"
+    />
+
+    {/* Bold "WORD" text */}
+    <text
+      x="32"
+      y="36"
+      textAnchor="middle"
+      fontFamily="'Bangers', cursive"
+      fontWeight="bold"
+      fontSize="20"
+      fill="#2A2D7E"
+    >
+      WORD
+    </text>
+
+    {/* Heroic underline */}
+    <path
+      d="M20 40L44 40"
+      stroke="#EF476F"
+      strokeWidth="4"
+      strokeLinecap="round"
+    />
+
+    {/* Shining effects */}
+    <path
+      d="M32 12L32 6"
+      stroke="#FFD700"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+    <path
+      d="M50 32L56 32"
+      stroke="#FFD700"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+    <path
+      d="M32 52L32 58"
+      stroke="#FFD700"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+    <path
+      d="M14 32L8 32"
+      stroke="#FFD700"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+
+    {/* Subtle wings */}
+    <path
+      d="M12 20L6 12"
+      stroke="#4285F4"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <path
+      d="M52 20L58 12"
+      stroke="#4285F4"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
   </svg>
 );
 
-export const SocialStudiesIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="12" cy="12" r="10" fill="#A78BFA" />
-    <circle cx="12" cy="12" r="5" fill="white" />
-    <path d="M12 9V12L14 14" stroke="#2A2D7E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+export const HappyPaintingIcon = ({
+  size = 128,
+  ...props
+}: { size?: number } & SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    width={size}
+    height={size}
+    {...props}
+  >
+  
+    <rect x="12" y="8" width="40" height="8" rx="4" fill="#795548" />{" "}
+   
+    <path d="M52 12L64 20L52 28Z" fill="#FFD700" /> 
+    <rect x="50" y="12" width="4" height="8" fill="#FF9800" />{" "}
+ 
+    <path d="M20 40Q24 30 32 36Q40 30 44 40Z" fill="#EF476F" />{" "}
 
-export const GamepadIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M6 11H10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    <path d="M8 9L8 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    <circle cx="17" cy="10" r="1" fill="currentColor" />
-    <circle cx="14" cy="13" r="1" fill="currentColor" />
-    <path d="M6.5 5H17.5C18.3284 5 19 5.67157 19 6.5V17.5C19 18.3284 18.3284 19 17.5 19H6.5C5.67157 19 5 18.3284 5 17.5V6.5C5 5.67157 5.67157 5 6.5 5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-  </svg>
-);
+    <circle cx="28" cy="44" r="6" fill="#4285F4" /> 
+    <path
+      d="M36 48Q40 38 48 44"
+      stroke="#34A853"
+      strokeWidth="8"
+      strokeLinecap="round"
+    />{" "}
 
-export const GraduationIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M22 10L12 5L2 10L12 15L22 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M6 12V17C6 17 8.5 19 12 19C15.5 19 18 17 18 17V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+    <circle
+      cx="24"
+      cy="24"
+      r="16"
+      fill="#FFD166"
+      stroke="#2A2D7E"
+      strokeWidth="2"
+    />
+    <circle cx="18" cy="18" r="4" fill="#EF476F" />
+    <circle cx="24" cy="14" r="4" fill="#4285F4" />
+    <circle cx="30" cy="18" r="4" fill="#34A853" />
 
-export const CharacterIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="12" cy="8" r="5" stroke="currentColor" strokeWidth="2" />
-    <path d="M19 21C19 17.134 15.866 14 12 14C8.13401 14 5 17.134 5 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-  </svg>
-);
-
-export const AwardIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="12" cy="9" r="6" stroke="currentColor" strokeWidth="2" />
-    <path d="M8 15L7 21L12 19L17 21L16 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-export const ParentIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="9" cy="9" r="4" stroke="currentColor" strokeWidth="2" />
-    <path d="M16 11C17.6569 11 19 9.65685 19 8C19 6.34315 17.6569 5 16 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    <path d="M3 20C3 16.6863 5.68629 14 9 14C12.3137 14 15 16.6863 15 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    <path d="M16 14C18.2091 14 20 16.6863 20 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path
+      d="M16 48L20 64"
+      stroke="#9C27B0"
+      strokeWidth="4"
+      strokeLinecap="round"
+    />
+    <path
+      d="M32 52L30 64"
+      stroke="#FF9800"
+      strokeWidth="4"
+      strokeLinecap="round"
+    />
   </svg>
 );
 
 export const GameIcons = {
-  math: <MathIcon />,
-  science: <ScienceIcon />,
-  reading: <ReadingIcon />,
-  "social studies": <SocialStudiesIcon />
+  academics: <NumberBlastIcon />,
+  technology: <CodeWizardsIcon />,
+  communication: <WordHeroesIcon />,
+  creativity: <HappyPaintingIcon />,
 };

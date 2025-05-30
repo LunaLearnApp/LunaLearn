@@ -68,7 +68,7 @@ const OfflineSupport = () => {
             </h2>
             <p className="text-gray-700 mb-4">
               In many underserved communities, young people have limited exposure to technology
-              and inconsistent internet access. LearnWithAI is designed to bridge this gap with:
+              and inconsistent internet access. LunaLearn is designed to bridge this gap with:
             </p>
             
             <ul className="space-y-4 mb-8">

@@ -129,7 +129,7 @@ const WhatsAppIntegration = () => {
                 {/* Bot message */}
                 <div className="flex">
                   <div className="bg-white rounded-lg p-3 max-w-[80%] shadow-sm">
-                    <p className="text-sm">👋 Welcome to LearnWithAI! I'm your personal learning assistant. What would you like to learn today?</p>
+                    <p className="text-sm">👋 Welcome to LunaLearn! I'm your personal learning assistant. What would you like to learn today?</p>
                     <p className="text-xs text-gray-500 text-right mt-1">10:30 AM</p>
                   </div>
                 </div>
