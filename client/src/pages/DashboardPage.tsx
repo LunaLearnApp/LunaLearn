@@ -48,7 +48,7 @@ const DashboardPage = () => {
   return (
     <>
       <Helmet>
-        <title>My Dashboard | LunaLearn</title>
+        <title>My Dashboard | Luna Learn</title>
         <meta 
           name="description" 
           content="Track your learning progress, collect rewards, and find new educational games."
