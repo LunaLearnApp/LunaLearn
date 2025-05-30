@@ -27,7 +27,7 @@ const WhatsAppIntegration = () => {
             
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
-                <div className="h-10 w-10 rounded-full bg-green flex items-center justify-center mr-4 mt-1">
+                <div className="h-10 w-10 rounded-full bg-green-400 flex items-center justify-center mr-4 mt-1">
                   <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                   </svg>
@@ -42,7 +42,7 @@ const WhatsAppIntegration = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="h-10 w-10 rounded-full bg-blue flex items-center justify-center mr-4 mt-1">
+                <div className="h-10 w-10 rounded-full bg-blue-400 flex items-center justify-center mr-4 mt-1">
                   <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -57,7 +57,7 @@ const WhatsAppIntegration = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="h-10 w-10 rounded-full bg-purple flex items-center justify-center mr-4 mt-1">
+                <div className="h-10 w-10 rounded-full bg-purple-400 flex items-center justify-center mr-4 mt-1">
                   <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                   </svg>
@@ -92,20 +92,20 @@ const WhatsAppIntegration = () => {
                       We'll send a message with instructions to get started.
                     </p>
                   </div>
-                  <Button type="submit" className="w-full bg-green hover:bg-green-600">
+                  <Button type="submit" className="w-full bg-green-400 hover:bg-green-600">
                     Register for WhatsApp Learning
                   </Button>
                 </form>
               ) : (
                 <div className="text-center">
                   <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-green/20">
-                    <Check className="w-6 h-6 text-green" />
+                    <Check className="w-6 h-6 text-green-400" />
                   </div>
                   <h4 className="font-fredoka text-lg mb-2">Registration Successful!</h4>
                   <p className="text-gray-600 mb-4">
                     We've sent a message to your WhatsApp. Follow the instructions to start learning!
                   </p>
-                  <Button variant="outline" className="border-green text-green hover:bg-green-50" onClick={() => setIsRegistered(false)}>
+                  <Button variant="outline" className="border-green-400 text-green-400 hover:bg-green-50" onClick={() => setIsRegistered(false)}>
                     Register Another Number
                   </Button>
                 </div>
@@ -207,7 +207,7 @@ const WhatsAppIntegration = () => {
                   placeholder="Type a message"
                   className="flex-1 mr-2"
                 />
-                <Button size="icon" className="bg-green hover:bg-green-600 h-10 w-10 rounded-full">
+                <Button size="icon" className="bg-green-400 hover:bg-green-600 h-10 w-10 rounded-full">
                   <Send className="h-5 w-5" />
                 </Button>
               </div>
@@ -216,13 +216,13 @@ const WhatsAppIntegration = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <h3 className="font-fredoka text-2xl mb-4">Start Learning in 3 Simple Steps</h3>
+          <h3 className="font-fredoka text-purple-600 text-2xl mb-4">Start Learning in 3 Simple Steps</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="relative">
               <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="font-fredoka text-2xl text-primary">1</span>
               </div>
-              <h4 className="font-fredoka text-xl mb-2">Save Our Number</h4>
+              <h4 className="font-fredoka text-primary text-xl mb-2">Save Our Number</h4>
               <p className="text-gray-600">Add our WhatsApp number to your contacts for easy access.</p>
               
               {/* Arrow for desktop */}
@@ -234,25 +234,25 @@ const WhatsAppIntegration = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-blue/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="font-fredoka text-2xl text-blue">2</span>
+              <div className="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="font-fredoka text-2xl text-blue-400">2</span>
               </div>
-              <h4 className="font-fredoka text-xl mb-2">Send "Hello"</h4>
+              <h4 className="font-fredoka text-xl mb-2 text-blue-500">Send "Hello"</h4>
               <p className="text-gray-600">Start a conversation with a simple message to activate the chatbot.</p>
               
               {/* Arrow for desktop */}
               <div className="hidden md:block absolute top-8 left-full transform -translate-x-1/2">
-                <svg className="w-12 h-8 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-12 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </div>
             </div>
             
             <div>
-              <div className="bg-green/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="font-fredoka text-2xl text-green">3</span>
+              <div className="bg-green-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="font-fredoka text-2xl text-green-400">3</span>
               </div>
-              <h4 className="font-fredoka text-xl mb-2">Start Learning</h4>
+              <h4 className="font-fredoka text-xl text-green-500 mb-2">Start Learning</h4>
               <p className="text-gray-600">Follow the prompts to access lessons, quizzes, and educational content.</p>
             </div>
           </div>
