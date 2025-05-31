@@ -239,7 +239,7 @@ const GamesPage = () => {
         <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-yellow-400 opacity-60 rounded-full"></div>
         <div className="absolute top-[-50px] left-[300px] w-[200px] h-[200px] bg-green-400 opacity-60 rounded-full"></div>
         <div className="absolute top-[220px] left-[800px] w-[300px] h-[300px] bg-primary opacity-30 rounded-full"></div>
-        <div className="absolute top-[-200px] right-[-200px] w-[600px] h-[600px] bg-purple-400 opacity-30 rounded-full"></div>
+        <div className="absolute top-[-70px] right-[-0px] w-[300px] h-[300px] bg-purple-400 opacity-30 rounded-full"></div>
 
         <div className="absolute top-10 right-10 text-purple text-2xl">✦</div>
         <div className="absolute top-20 left-20 text-secondary text-xl">✦</div>

@@ -42,18 +42,18 @@ const HowItWorks = () => {
           {/* Timeline vertical line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-purple-500 to-blue-500 transform -translate-x-1/2 hidden md:block"></div>
 
-    <div className="absolute top-[-150px] left-[-200px] w-[300px] h-[300px] bg-yellow-400 opacity-60 rounded-full"></div>
-        <div className="absolute top-[550px] left-[300px] w-[200px] h-[200px] bg-green-400 opacity-30 rounded-full"></div>
-        <div className="absolute top-[220px] left-[800px] w-[250px] h-[250px] bg-primary opacity-30 rounded-full"></div>
-        <div className="absolute top-[-200px] right-[-600px] w-[600px] h-[600px] bg-purple-400 opacity-30 rounded-full"></div>
+          <div className="absolute top-[-150px] left-[-200px] w-[300px] h-[300px] bg-yellow-400 opacity-60 rounded-full"></div>
+          <div className="absolute top-[550px] left-[300px] w-[200px] h-[200px] bg-green-400 opacity-30 rounded-full"></div>
+          <div className="absolute top-[220px] left-[800px] w-[250px] h-[250px] bg-primary opacity-30 rounded-full"></div>
+          <div className="absolute top-[-300px] right-[-30px] w-[300px] h-[300px] bg-purple-400 opacity-30 rounded-full"></div>
 
-      <div className="absolute top-10 right-10 text-purple text-2xl">✦</div>
-      <div className="absolute top-20 left-20 text-secondary text-xl">✦</div>
-      <div className="absolute bottom-40 right-20 text-primary text-2xl">✦</div>
-      <div className="absolute top-[45rem] left-40 text-purple-400 text-2xl">✦</div>
-      <div className="absolute top-60 right-[50rem] text-purple-400 text-xl">✦</div>
-      <div className="absolute bottom-60 right-[30rem] text-purple text-2xl">✦</div>
-      <div className="absolute top-[55rem] left-20 text-purple text-2xl">✦</div>
+          <div className="absolute top-10 right-10 text-purple text-2xl">✦</div>
+          <div className="absolute top-20 left-20 text-secondary text-xl">✦</div>
+          <div className="absolute bottom-40 right-20 text-primary text-2xl">✦</div>
+          <div className="absolute top-[45rem] left-40 text-purple-400 text-2xl">✦</div>
+          <div className="absolute top-60 right-[50rem] text-purple-400 text-xl">✦</div>
+          <div className="absolute bottom-60 right-[30rem] text-purple text-2xl">✦</div>
+          <div className="absolute top-[55rem] left-20 text-purple text-2xl">✦</div>
 
           <div className="space-y-16">
             {timelineSteps.map((step, index) => (
@@ -120,9 +120,9 @@ const HowItWorks = () => {
                     </>
                   )}
                 </div>
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
         </div>
       </div>
     </section>

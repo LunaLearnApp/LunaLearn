@@ -8,6 +8,7 @@ vite.config.ts.*
 *.log
 *.log.*
 *.swp
+.env
 # Ignore build artifacts
 # Ignore node modules
 # Ignore macOS system files

@@ -20,18 +20,18 @@ const LanguageInclusion = () => {
       textColor: 'text-pink-800',
       borderColor: 'border-pink-300',
       children: [
-        {id: 'en', code: 'en',name: 'English', Name: 'English', color: 'bg-blue-600'},
-        {id: 'zu', code: 'zu', name: 'Zulu', Name: 'isiZulu' , color: 'bg-red-600'},
-        {id: 'xh', code: 'xh', name: 'Xhosa', Name: 'isiXhosa', color: 'bg-purple-600'},
-        {id: 'af', code: 'af', name: 'Afrikaans', Name: 'Afrikaans', color: 'bg-orange-600' },
-        {id: 'st', code: 'st', name: 'Sesotho', Name: 'Sesotho', color: 'bg-green-600' },
-        {id: 'tn', code: 'tn', name: 'Setswana', Name: 'Setswana', color: 'bg-black' },
-        {id: 'nso', code: 'nso', name: 'Northern Sotho', Name: 'Sepedi', color: 'bg-yellow-600' },
-        {id: 'ts', code: 'ts', name: 'Tsonga', Name: 'Xitsonga', color: 'bg-pink-600' },
-        {id: 'ss', code: 'ss', name: 'Swati', Name: 'siSwati', color: 'bg-teal-600' },
-        {id: 've', code: 've', name: 'Venda', Name: 'Tshivenḓa', color: 'bg-orange-600' },
-        {id: 'nr', code: 'nr', name: 'Ndebele', Name: 'isiNdebele', color: 'bg-purple-600' },
-        {id: 'sl', code: 'sl', name: 'SASL', Name: 'SA Sign Language', color: 'bg-pink-600' },
+        {id: 'en', code: 'en',name: 'English', Name: 'English', color: 'bg-blue-400'},
+        {id: 'zu', code: 'zu', name: 'Zulu', Name: 'isiZulu' , color: 'bg-red-400'},
+        {id: 'xh', code: 'xh', name: 'Xhosa', Name: 'isiXhosa', color: 'bg-purple-400'},
+        {id: 'af', code: 'af', name: 'Afrikaans', Name: 'Afrikaans', color: 'bg-orange-400' },
+        {id: 'st', code: 'st', name: 'Sesotho', Name: 'Sesotho', color: 'bg-green-400' },
+        {id: 'tn', code: 'tn', name: 'Setswana', Name: 'Setswana', color: 'bg-gray-400' },
+        {id: 'nso', code: 'nso', name: 'Northern Sotho', Name: 'Sepedi', color: 'bg-yellow-400' },
+        {id: 'ts', code: 'ts', name: 'Tsonga', Name: 'Xitsonga', color: 'bg-pink-400' },
+        {id: 'ss', code: 'ss', name: 'Swati', Name: 'siSwati', color: 'bg-teal-400' },
+        {id: 've', code: 've', name: 'Venda', Name: 'Tshivenḓa', color: 'bg-orange-400' },
+        {id: 'nr', code: 'nr', name: 'Ndebele', Name: 'isiNdebele', color: 'bg-purple-400' },
+        {id: 'sl', code: 'sl', name: 'SASL', Name: 'SA Sign Language', color: 'bg-pink-400' },
       ]
     }
     
@@ -103,7 +103,7 @@ const LanguageInclusion = () => {
               <div className="bg-blue-600 p-3 rounded-xl shadow-sm mb-3">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-blue-100 text-sm">Original (English)</span>
-                  <Check className="w-4 h-4 text-green-700" />
+                  <Check className="w-4 h-4 text-white" />
                 </div>
                 <p className="text-gray-300 text-sm">
                   "The water cycle consists of evaporation, condensation, and precipitation."
@@ -113,7 +113,7 @@ const LanguageInclusion = () => {
               <div className="bg-red-500 p-3 rounded-xl shadow-sm mb-3">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-red-100 text-sm">Translated (isiZulu)</span>
-                  <Check className="w-4 h-4 text-green-700" />
+                  <Check className="w-4 h-4 text-white" />
                 </div>
                 <p className="text-gray-300 text-sm">
                   "Umjikelezo wamanzi ubandakanya ukuphenduka komhwamuko, ukucwiliswa, kanye nokuna."
@@ -123,7 +123,7 @@ const LanguageInclusion = () => {
               <div className="bg-pink-600 p-3 rounded-xl shadow-sm mb-3">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-pink-100 text-sm">Translated (Xitsonga)</span>
-                  <Check className="w-4 h-4 text-green-700" />
+                  <Check className="w-4 h-4 text-white" />
                 </div>
                 <p className="text-gray-300 text-sm">
                   "Ndzhendzheleko wa mati wu katsa nkahelo, ku n'oka ni ku na ka mati."
