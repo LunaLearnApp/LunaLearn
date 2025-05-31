@@ -25,6 +25,8 @@ const mockGames: Game[] = [
     minGrade: 1,
     maxGrade: 7,
     durationMinutes: 10,
+    imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/012/original/happy_no.png?1748692462",
   },
   {
     id: 2,
@@ -35,6 +37,8 @@ const mockGames: Game[] = [
     minGrade: 4,
     maxGrade: 7,
     durationMinutes: 25,
+    imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/009/original/code_wizard.png?1748691628",
   },
   {
     id: 3,
@@ -45,6 +49,8 @@ const mockGames: Game[] = [
     minGrade: 1,
     maxGrade: 7,
     durationMinutes: 12,
+    imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/010/original/word_hero.png?1748691861",
   },
   {
     id: 4,
@@ -55,7 +61,10 @@ const mockGames: Game[] = [
     minGrade: 1,
     maxGrade: 7,
     durationMinutes: 15,
+        imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/011/original/happy_painting.png?1748692045",
   },
+
 ];
 
 const GameLibrary = () => {
@@ -107,7 +116,7 @@ const GameLibrary = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="font-fredoka text-4xl text-center mb-6">
-        Games Library
+        Our Games
         </h2>
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
           Explore our collection of interactive educational games designed to
@@ -176,16 +185,6 @@ const GameLibrary = () => {
           </div>
         )}
 
-        {filteredGames.length === 0 && !isLoading && (
-          <div className="text-center py-10">
-            <h3 className="text-xl font-fredoka mb-2">
-              No matching games found
-            </h3>
-            <p className="text-gray-600 mb-2">
-              Showing a few sample games instead:
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );

@@ -2,25 +2,29 @@ const HowItWorks = () => {
   const timelineSteps = [
     {
       title: "Create Your Profile",
-      image: "/images/kid-profile.png", 
+      image:
+        "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/014/original/profile_creat.png?1748693489",
       color: "primary",
-      icon: "👦", 
+      icon: "👦",
     },
     {
       title: "Play & Learn",
-      image: "/images/kid-playing.png",
+      image:
+        "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/015/original/playt.png?1748693582",
       color: "purple",
       icon: "🎮",
     },
     {
       title: "Earn Rewards",
-      image: "/images/kid-rewards.png",
+      image:
+        "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/017/original/reward.png?1748693719",
       color: "blue",
       icon: "🏆",
     },
     {
       title: "Track Progress",
-      image: "/images/kid-progress.png",
+      image:
+        "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/018/original/progress.png?1748693842",
       color: "green",
       icon: "📈",
     },

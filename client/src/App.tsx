@@ -10,6 +10,7 @@ import GameDetailPage from "@/pages/GameDetailPage";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -21,6 +22,7 @@ function Router() {
           <Route path="/games/:id" component={GameDetailPage} />
           <Route path="/parents" component={ParentsPage} />
           <Route path="/dashboard" component={DashboardPage} />
+ 
           <Route component={NotFound} />
         </Switch>
       </main>

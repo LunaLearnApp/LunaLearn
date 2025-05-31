@@ -1,102 +1,19 @@
 import { SVGProps } from "react";
 
+
 export const NumberBlastIcon = ({
-  size = 128, // bigger default size
+  size = 500,
   ...props
-}: { size?: number } & SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 90 90"
+}: { size?: number } & React.ImgHTMLAttributes<HTMLImageElement>) => (
+  <img
+    src="https://www.shecodes.io/assets/separators/separator--left-rounded-acdcd3213ef448e4dbfde458ffee57070c35d04435b2c6bceeb04a450df1fa53.png" // <- Replace this with your image path or URL
     width={size}
     height={size}
+    alt="Number Blast Icon"
     {...props}
-  >
-    {/* Bright yellow explosion base */}
-    <path
-      d="M32 12L40 24L52 28L40 32L32 44L24 32L12 28L24 24Z"
-      fill="#FFD700"
-      stroke="#FF9800"
-      strokeWidth="2"
-    />
-
-    {/* Cartoon explosion particles */}
-    <circle cx="10" cy="15" r="3" fill="#FF5722" />
-    <circle cx="54" cy="12" r="4" fill="#FF5722" />
-    <circle cx="15" cy="50" r="3.5" fill="#FF5722" />
-    <circle cx="50" cy="52" r="3" fill="#FF5722" />
-
-    {/* Flying numbers with wobbly motion lines */}
-    <g className="flying-numbers">
-      <text
-        x="20"
-        y="25"
-        fontFamily="'Comic Sans MS', cursive, sans-serif"
-        fontWeight="bold"
-        fontSize="14"
-        fill="#4285F4"
-      >
-        5
-      </text>
-      <path
-        d="M25 28Q30 20 35 22"
-        fill="none"
-        stroke="#4285F4"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-
-      <text
-        x="45"
-        y="20"
-        fontFamily="'Comic Sans MS', cursive, sans-serif"
-        fontWeight="bold"
-        fontSize="16"
-        fill="#EA4335"
-      >
-        8
-      </text>
-      <path
-        d="M42 23Q48 15 50 18"
-        fill="none"
-        stroke="#EA4335"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-
-      <text
-        x="15"
-        y="45"
-        fontFamily="'Comic Sans MS', cursive, sans-serif"
-        fontWeight="bold"
-        fontSize="18"
-        fill="#34A853"
-      >
-        12
-      </text>
-      <path
-        d="M20 42Q10 35 12 38"
-        fill="none"
-        stroke="#34A853"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </g>
-
-    {/* Big friendly plus sign at center */}
-    <rect x="28" y="20" width="8" height="24" rx="2" fill="#FFFFFF" />
-    <rect x="20" y="28" width="24" height="8" rx="2" fill="#FFFFFF" />
-
-    {/* Sparkle effects */}
-    <path
-      d="M32 5L34 10L39 10L35 14L37 19L32 16L27 19L29 14L25 10L30 10Z"
-      fill="#FFEB3B"
-    />
-    <path
-      d="M60 32L55 34L55 39L59 35L64 37L61 32L64 27L59 29L55 25L55 30Z"
-      fill="#FFEB3B"
-    />
-  </svg>
+  />
 );
+
 
 export const CodeWizardsIcon = ({
   size = 128,
@@ -316,8 +233,8 @@ export const HappyPaintingIcon = ({
 );
 
 export const GameIcons = {
-  academics: <NumberBlastIcon />,
-  technology: <CodeWizardsIcon />,
-  communication: <WordHeroesIcon />,
-  creativity: <HappyPaintingIcon />,
+  academics: NumberBlastIcon,
+  technology: CodeWizardsIcon,
+  communication: WordHeroesIcon,
+  creativity: HappyPaintingIcon,
 };

@@ -3,65 +3,70 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 
-export interface CharacterDetailProps {
-  character: {
-    id: string;
-    name: string;
-    color: string;
-    description: string;
-    skills: string[];
-  };
-}
+export const mockCharacters = [
+  {
+    id: "professor-byte",
+    name: "MathBot",
+    bio: "I love solving equations!",
+  },
+  {
+    id: "hootie",
+    name: "SciencePro",
+    bio: "Exploring the mysteries of the universe.",
+  },
+  {
+    id: "rex",
+    name: "Rex",
+    bio: "Rawr! I'm here to dig into history.",
+  },
+  {
+    id: "astro",
+    name: "Astro",
+    bio: "Blast off into the world of astronomy!",
+  },
+  {
+    id: "pixie",
+    name: "Pixie",
+    bio: "Sprinkling creativity everywhere.",
+  },
+  {
+    id: "gizmo",
+    name: "Gizmo",
+    bio: "Tinkering with technology and making magic happen.",
+  },
+];
 
-export const CharacterDetail = ({ character }: CharacterDetailProps) => {
+export const CharacterDetail = () => {
   return (
-    <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 max-w-4xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-8 items-center">
-        <div className="w-full md:w-1/3 flex justify-center">
-          <div className={`w-40 h-40 md:w-48 md:h-48 rounded-full border-4 ${character.color.replace('bg-', 'border-')} shadow-lg overflow-hidden`}>
-            {CharacterAvatars[character.id as keyof typeof CharacterAvatars]}
-          </div>
-        </div>
-        <div className="w-full md:w-2/3">
-          <h3 className={`font-fredoka text-3xl ${character.color.replace('bg-', 'text-')} mb-3`}>{character.name}</h3>
-          <p className="text-lg text-gray-600 mb-4">{character.description}</p>
-          <div className="flex flex-wrap gap-3 mb-4">
-            {character.skills.map((skill, index) => {
-              let bgColor = "";
-              let textColor = "";
-              
-              switch (index % 3) {
-                case 0:
-                  bgColor = "bg-yellow-100";
-                  textColor = "text-yellow-800";
-                  break;
-                case 1:
-                  bgColor = "bg-blue-100";
-                  textColor = "text-blue-800";
-                  break;
-                case 2:
-                  bgColor = "bg-green-100";
-                  textColor = "text-green-800";
-                  break;
-              }
-              
-              return (
-                <Badge 
-                  key={index} 
-                  className={`${bgColor} ${textColor} font-bold px-3 py-1 rounded-full text-sm`}
-                  variant="outline"
-                >
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-fredoka text-center mb-12 text-gray-800">
+        Meet Our AI Chatbots
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {mockCharacters.map((character) => (
+          <div
+            key={character.id}
+            className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+          >
+            <div className="w-24 h-24 mx-auto mb-4">
+              {character.avatar && CharacterAvatars[character.avatar]}
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-800">
+              {character.name}
+            </h2>
+            <p className="text-gray-600 my-2">{character.description}</p>
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
+              {character.skills.map((skill) => (
+                <Badge key={skill} className={`${character.color} text-white`}>
                   {skill}
                 </Badge>
-              );
-            })}
+              ))}
+            </div>
+            <Link href={`/characters/${character.id}`}>
+              <Button className="mt-6">Learn More</Button>
+            </Link>
           </div>
-          <Link href={`/games?character=${character.id}`}>
-            <Button className={`${character.color} text-white font-bold px-6 py-3 rounded-full shadow hover:shadow-lg transition-all hover:-translate-y-1 duration-300`}>
-              Learn with {character.name}
-            </Button>
-          </Link>
-        </div>
+        ))}
       </div>
     </div>
   );

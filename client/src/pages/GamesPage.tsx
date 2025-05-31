@@ -19,7 +19,8 @@ const mockGames: Game[] = [
     minGrade: 1,
     maxGrade: 7,
     durationMinutes: 10,
-    
+    imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/012/original/happy_no.png?1748692462",
   },
   {
     id: 2,
@@ -30,6 +31,8 @@ const mockGames: Game[] = [
     minGrade: 4,
     maxGrade: 7,
     durationMinutes: 25,
+    imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/009/original/code_wizard.png?1748691628",
   },
   {
     id: 3,
@@ -40,6 +43,8 @@ const mockGames: Game[] = [
     minGrade: 1,
     maxGrade: 7,
     durationMinutes: 12,
+    imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/010/original/word_hero.png?1748691861",
   },
   {
     id: 4,
@@ -50,6 +55,8 @@ const mockGames: Game[] = [
     minGrade: 1,
     maxGrade: 7,
     durationMinutes: 15,
+    imageUrl:
+      "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/167/011/original/happy_painting.png?1748692045",
   },
 ];
 
@@ -131,10 +138,10 @@ const GamesPage = () => {
         />
       </Helmet>
 
-      <div className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="container mx-auto px-4">
+      <div className="pt-24 pb-16 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50 relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
           <h1 className="font-fredoka text-4xl md:text-5xl text-center mb-6">
-            <span className="bg-gradient-to-r from-primary via-purple to-blue bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-purple-500 to-yellow-500 bg-clip-text text-transparent">
               Games Library
             </span>
           </h1>
@@ -143,7 +150,6 @@ const GamesPage = () => {
             make learning fun while building essential skills.
           </p>
 
-  
           <div className="max-w-md mx-auto mb-8">
             <div className="relative">
               <input
@@ -172,7 +178,9 @@ const GamesPage = () => {
             </div>
           </div>
 
-          <div className="mb-10 flex flex-col md:flex-row gap-6 justify-center">
+          <div className="mb-10 flex flex-col md:flex-row gap-6 justify-center">4
+
+            {/* Subjects */}
             <div className="bg-white p-4 rounded-2xl shadow">
               <h3 className="font-bold mb-3 text-center md:text-left">
                 Subject:
@@ -199,6 +207,7 @@ const GamesPage = () => {
               </div>
             </div>
 
+            {/* Grade */}
             <div className="bg-white p-4 rounded-2xl shadow">
               <h3 className="font-bold mb-3 text-center md:text-left">
                 Level:
@@ -225,6 +234,32 @@ const GamesPage = () => {
           </div>
         </div>
       </div>
+      <div className="absolute inset-0 pointer-events-none z-0">
+
+        <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-yellow-400 opacity-60 rounded-full"></div>
+        <div className="absolute top-[-50px] left-[300px] w-[200px] h-[200px] bg-green-400 opacity-60 rounded-full"></div>
+        <div className="absolute top-[220px] left-[800px] w-[300px] h-[300px] bg-primary opacity-30 rounded-full"></div>
+        <div className="absolute top-[-200px] right-[-200px] w-[600px] h-[600px] bg-purple-400 opacity-30 rounded-full"></div>
+
+        <div className="absolute top-10 right-10 text-purple text-2xl">✦</div>
+        <div className="absolute top-20 left-20 text-secondary text-xl">✦</div>
+        <div className="absolute bottom-40 right-20 text-primary text-2xl">
+          ✦
+        </div>
+
+        <div className="absolute top-[45rem] left-40 text-purple-400 text-2xl">
+          ✦
+        </div>
+        <div className="absolute top-60 right-[66rem] text-purple-400 text-xl">
+          ✦
+        </div>
+        <div className="absolute bottom-60 right-[30rem] text-purple text-2xl">
+          ✦
+        </div>
+        <div className="absolute top-[55rem] left-20 text-purple text-2xl">
+          ✦
+        </div>
+      </div>
 
       <div className="py-12 bg-white">
         <div className="container mx-auto px-4">
@@ -234,7 +269,6 @@ const GamesPage = () => {
             </div>
           )}
 
- 
           {error && (
             <div className="text-center py-20">
               <h3 className="text-2xl font-fredoka text-gray-700 mb-4">
