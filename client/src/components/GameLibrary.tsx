@@ -67,6 +67,8 @@ const mockGames: Game[] = [
 
 ];
 
+
+
 const GameLibrary = () => {
   const [selectedSubject, setSelectedSubject] = useState<string>("all");
   const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
@@ -122,6 +124,7 @@ const GameLibrary = () => {
           Explore our collection of interactive educational games designed to
           make learning fun while building essential skills.
         </p>
+        
 
         <div className="mb-12 flex flex-col md:flex-row gap-6 justify-center">
           <div className="bg-gray-50 p-4 rounded-2xl shadow">
@@ -172,6 +175,7 @@ const GameLibrary = () => {
             </div>
           </div>
         </div>
+        
 
         {isLoading ? (
           <div className="flex justify-center">
