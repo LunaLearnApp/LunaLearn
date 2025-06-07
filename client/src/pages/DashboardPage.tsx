@@ -35,7 +35,7 @@ const DashboardPage = () => {
   const isLoading = progressLoading || badgesLoading || charactersLoading || gamesLoading;
   
   // Get the unlocked badges
-  const unlockedBadges = badges?.filter(badge => badge.unlocked) || [0];
+  const unlockedBadges = badges?.filter(badge => badge.unlocked) || [];
   const totalBadges = badges?.length || 0;
   
   // Handle celebration animation
@@ -123,7 +123,7 @@ const DashboardPage = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Badges Earned</p>
-                    <h3 className="text-2xl text-yellow-500 font-fredoka">{unlockedBadges} <span className="text-gray-400 text-lg">/ {totalBadges}</span></h3>
+                    <h3 className="text-2xl text-yellow-500 font-fredoka">{unlockedBadges.length} <span className="text-gray-400 text-lg">/ {totalBadges}</span></h3>
                   </div>
                 </div>
                 
