@@ -7,6 +7,7 @@ import GamesPage from "@/pages/GamesPage";
 import ParentsPage from "@/pages/ParentsPage";
 import DashboardPage from "@/pages/DashboardPage";
 import GameDetailPage from "@/pages/GameDetailPage";
+import AboutUsPage from "@/pages/AboutUsPage";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -22,6 +23,7 @@ function Router() {
           <Route path="/games/:id" component={GameDetailPage} />
           <Route path="/parents" component={ParentsPage} />
           <Route path="/dashboard" component={DashboardPage} />
+          <Route path="/aboutus" component={AboutUsPage}/>
  
           <Route component={NotFound} />
         </Switch>

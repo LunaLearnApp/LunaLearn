@@ -8,7 +8,7 @@ export const CharacterDetail = ({ character }) => {
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 max-w-md mx-auto">
-      <h2 className="text-2xl font-semibold text-gray-800">{character.name}</h2>
+      <h2 className={`${character.textColor} text-2xl font-semibold`}>{character.name}</h2>
       <p className="text-gray-600 my-2">{character.description}</p>
       <div className="flex flex-wrap justify-center gap-2 mt-4">
         {character.skills.map((skill) => (
@@ -21,7 +21,7 @@ export const CharacterDetail = ({ character }) => {
         ))}
       </div>
       <Link href={`/characters/${character.id}`}>
-        <Button className="mt-6">Learn More</Button>
+        <Button className="mt-6 text-white">Learn More</Button>
       </Link>
     </div>
   );

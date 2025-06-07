@@ -29,16 +29,16 @@ const HomePage = () => {
       <Hero />
       <SubjectCategories />
       <AITutorChat />
-      <OfflineSupport />
-      <LanguageInclusion />
-      <WhatsAppIntegration />
       <Features />
       <CharacterGuides />
+      <LanguageInclusion />
+      <OfflineSupport />
       <GameLibrary />
       <Achievements />
-      <HowItWorks />
       <ParentSection />
+      <HowItWorks />
       <CallToAction />
+      <WhatsAppIntegration />
     </>
   );
 };

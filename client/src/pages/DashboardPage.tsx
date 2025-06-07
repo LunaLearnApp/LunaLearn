@@ -95,7 +95,7 @@ const DashboardPage = () => {
           </div>
         </div>
         <div className="absolute bottom-[3rem] left-[390px] w-[400px] h-[400px] bg-primary opacity-60 rounded-full"></div>
-        <div className="absolute top-[-160px] right-[-0px] w-[300px] h-[300px] bg-purple-400 opacity-60 rounded-full"></div>
+        <div className="absolute top-[-160px] right-[-100px] w-[300px] h-[300px] bg-purple-400 opacity-60 rounded-full"></div>
       
         <div className="absolute top-[5rem] right-[15rem] text-teal-400 text-4xl">✦</div>
         <div className="absolute top-[9rem] right-[40rem] text-purple-400 text-xl">✦</div>

@@ -24,6 +24,7 @@ export interface Character {
   name: string;
   description: string;
   color: string;
+  textColor: string;
   skills: string[];
   imageUrl?: string;
 }

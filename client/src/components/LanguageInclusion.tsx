@@ -53,11 +53,6 @@ const LanguageInclusion = () => {
           <div className="bg-purple-50 rounded-2xl p-6 relative overflow-hidden">
             <div className="relative z-10">
               <Globe className="mx-auto w-10 h-10 text-purple-400 mb-1" />
-              {/* <h3 className="font-fredoka text-2xl mb-3">Language Support</h3>
-              <p className="text-gray-700 mb-4">
-                Content is available in 12 official South African languages, making learning 
-                accessible to everyone regardless of their language background.
-              </p> */}
 
               <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                 {/* Map through main subject categories */}
