@@ -13,7 +13,8 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "Games", path: "/games" },
     { name: "Dashboard", path: "/dashboard" },
-    { name: "Parents", path: "/parents" }
+    { name: "Parents", path: "/parents" },
+    { name: "About Us", path: "/aboutus" }
   ];
 
   return (

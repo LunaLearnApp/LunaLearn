@@ -62,6 +62,7 @@ const Footer = () => {
             <h3 className="font-fredoka text-primary mb-6">Support</h3>
             <ul className="text-gray-700 space-y-3">
               <li><a href="#" className="hover:text-primary transition-colors">Help Center</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>

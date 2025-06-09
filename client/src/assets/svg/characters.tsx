@@ -60,7 +60,7 @@ export const AstronautCharacter = (props: SVGProps<SVGSVGElement>) => (
 
 export const FairyCharacter = (props: SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <circle cx="32" cy="32" r="30" fill="#F9A8D4" />
+    <circle cx="32" cy="32" r="30" fill="#FF00FF" />
     <circle cx="32" cy="25" r="10" fill="#FFECF2" />
     <circle cx="28" cy="23" r="2" fill="#2A2D7E" />
     <circle cx="36" cy="23" r="2" fill="#2A2D7E" />

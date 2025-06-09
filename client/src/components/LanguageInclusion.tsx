@@ -53,7 +53,9 @@ const LanguageInclusion = () => {
           <div className="bg-purple-50 rounded-2xl p-6 relative overflow-hidden w-full md:w-1/2">
             <div className="relative z-10">
               <Globe className="mx-auto w-10 h-10 text-purple-400 mb-1" />
-              <div className="grid grid-cols-1 gap-6">
+
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                {/* Map through main subject categories */}
                 {languages.map((languages) => (
                   <div key={languages.id} className="flex flex-col space-y-4">
                     <div
