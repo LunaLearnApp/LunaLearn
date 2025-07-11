@@ -4,9 +4,9 @@ const AboutUsPage = () => {
   
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container p-8 mx-auto px-4">
         
-        <div className="bg-gradient-to-r from-pink-200 to-blue-200 rounded-3xl p-8 md:p-12">
+        <div className="bg-gradient-to-r from-pink-200 to-blue-200 rounded-3xl p-9 md:p-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-fredoka text-3xl mb-6 text-primary text-center">Why Language Matters</h2>
             <div className="bg-white/90 rounded-2xl p-6 mb-8">
