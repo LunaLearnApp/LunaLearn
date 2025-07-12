@@ -3,13 +3,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
-import GamesPage from "@/pages/GamesPage";
-import ParentsPage from "@/pages/ParentsPage";
-import DashboardPage from "@/pages/DashboardPage";
-import GameDetailPage from "@/pages/GameDetailPage";
 import AboutUsPage from "@/pages/AboutUsPage";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LoginPage from "@/pages/LoginPage";
+import SignupPage from "@/pages/SignupPage";
+import QuizzPage from "@/pages/QuizzPage";
+import { LogIn } from "lucide-react";
 
 
 function Router() {
@@ -19,12 +19,11 @@ function Router() {
       <main className="flex-grow">
         <Switch>
           <Route path="/" component={HomePage} />
-          <Route path="/games" component={GamesPage} />
-          <Route path="/games/:id" component={GameDetailPage} />
-          <Route path="/parents" component={ParentsPage} />
-          <Route path="/dashboard" component={DashboardPage} />
+          <Route path="/quizz" component={QuizzPage}/>
+          <Route path="/login" component={LoginPage} />
+          <Route path="/signup" component={SignupPage} />
           <Route path="/aboutus" component={AboutUsPage}/>
- 
+
           <Route component={NotFound} />
         </Switch>
       </main>

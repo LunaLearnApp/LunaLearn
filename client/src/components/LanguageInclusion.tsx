@@ -35,7 +35,6 @@ const LanguageInclusion = () => {
         { id: "ss", code: "ss", name: "Swati", color: "bg-teal-400" },
         { id: "ve", code: "ve", name: "Venda", color: "bg-orange-400" },
         { id: "nr", code: "nr", name: "Ndebele", color: "bg-purple-400" },
-        { id: "sl", code: "sl", name: "SASL", color: "bg-pink-400" },
       ],
     },
   ];
@@ -64,15 +63,23 @@ const LanguageInclusion = () => {
                       {languages.name}
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                      {languages.children.map((child) => (
-                        <Link
-                          key={child.id}
-                          href={`/languages/${child.id}`}
-                          className={`${child.color} text-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 duration-300 flex items-center justify-center font-fredoka`}
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
+                      {languages.children.map((child, index) => {
+                      
+                        const isFullWidth = index === 0; 
+                        return (
+                          <Link
+                            key={child.id}
+                            href={`/languages/${child.id}`}
+                            className={`${
+                              child.color
+                            } text-white p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow flex items-center justify-center font-fredoka ${
+                              isFullWidth ? "col-span-2" : ""
+                            }`}
+                          >
+                            {child.name}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}

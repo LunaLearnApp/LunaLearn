@@ -16,14 +16,6 @@ const Hero = () => {
       <div className="absolute top-[55rem] left-20 text-purple text-2xl">✦</div>
 
       <div className="container mx-auto px-4">
-        <div className="flex justify-center items-center gap-2 mb-8">
-          <div className="ml-auto">
-            <Button className="bg-blue-400 text-white font-bold py-3 px-6 rounded-full shadow hover:shadow-lg transition-transform transform hover:-translate-y-1" size="lg">
-              Try Luna Learn Free
-            </Button>
-          </div>
-        </div>
-
         {/* Main headline  */}
         <div className="text-center mb-16">
           <h1 className="font-fredoka text-4xl text-primary md:text-5xl lg:text-6xl leading-tight mb-4">
@@ -145,14 +137,6 @@ const Hero = () => {
               <h3 className="font-fredoka text-primary text-xl mb-2">Focus on Fun</h3>
               <p className="text-gray-600">Game-based lessons to keep kids learning longer.</p>
             </div>
-          </div>
-        </div>
-
-        {/* Grade Level Selector moved below the features */}
-        <div className="bg-pink-200 rounded-3xl p-8 shadow-lg mb-12">
-          <h2 className="font-fredoka text-primary text-3xl text-center mb-6">Choose your level</h2>
-          <div className="flex justify-center">
-            <GradeLevelSelector />
           </div>
         </div>
       </div>

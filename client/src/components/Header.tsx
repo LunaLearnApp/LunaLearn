@@ -11,10 +11,9 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Games", path: "/games" },
-    { name: "Dashboard", path: "/dashboard" },
-    { name: "Parents", path: "/parents" },
-    { name: "About Us", path: "/aboutus" }
+    { name: "Quizz", path: "/quizz" },
+    { name: "About Us", path: "/aboutus" },
+    
   ];
 
   return (
@@ -23,7 +22,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <Link href="/">
             <a className="flex items-center gap-3">
-              <span className="font-fredoka text-2xl bg-gradient-to-r from-primary to-gray-500 bg-clip-text text-transparent">Luna Learn</span>
+              <span className="font-fredoka text-2xl bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">Luna Learn</span>
             </a>
           </Link>
         </div>
@@ -48,14 +47,14 @@ const Header = () => {
         </nav>
         
         <div className="flex items-center gap-3">
-          <Link href="/dashboard">
+          <Link href="/login">
             <Button variant="outline" className="hidden md:block border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white">
               Login
             </Button>
           </Link>
-          <Link href="/dashboard">
+          <Link href="/signup">
             <Button className="bg-primary text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
-              Sign Up
+              SignUp
             </Button>
           </Link>
           
@@ -82,18 +81,6 @@ const Header = () => {
                     </a>
                   </Link>
                 ))}
-                <div className="mt-4 space-y-3">
-                  <Link href="/dashboard">
-                    <Button variant="outline" className="w-full border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white">
-                      Login
-                    </Button>
-                  </Link>
-                  <Link href="/dashboard">
-                    <Button className="w-full bg-primary text-white font-semibold">
-                      Sign Up
-                    </Button>
-                  </Link>
-                </div>
               </nav>
             </SheetContent>
           </Sheet>
