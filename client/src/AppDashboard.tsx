@@ -1,16 +1,14 @@
 import { Switch, Route } from "wouter";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
-import HomePage from "@/pages/HomePage";
-import GamesPage from "@/pages/GamesPage";
-import ParentsPage from "@/pages/ParentsPage";
-import DashboardPage from "@/pages/DashboardPage";
-import GameDetailPage from "@/pages/GameDetailPage";
-import AboutUsPage from "@/pages/AboutUsPage";
-import HeaderDashboard from "@/components/HeaderDashboard";
-import Footer from "@/components/Footer";
-import ProfilePage from "@/pages/ProfilePage";
+import { Toaster } from "./components/ui/toaster";
+import { TooltipProvider } from "./components/ui/tooltip";
+import NotFound from "./pages/not-found";
+import HomePage from "./pages/HomePage";
+import GamesPage from "./pages/GamesPage";
+import ParentsPage from "./pages/ParentsPage";
+import DashboardPage from "./pages/DashboardPage";
+import GameDetailPage from "./pages/GameDetailPage";
+import HeaderDashboard from "./components/HeaderDashboard";
+import ProfilePage from "./pages/ProfilePage";
 import { LogIn } from "lucide-react";
 
 
@@ -25,17 +23,15 @@ function Router() {
           <Route path="/games/:id" component={GameDetailPage} />
           <Route path="/parents" component={ParentsPage} />
           <Route path="/profile" component={ProfilePage} />
-          <Route path="/aboutus" component={AboutUsPage}/>
 
           <Route component={NotFound} />
         </Switch>
       </main>
-      <Footer />
     </div>
   );
 }
 
-function App() {
+function AppDashboard() {
   return (
     <TooltipProvider>
       <Toaster />
@@ -44,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppDashboard;

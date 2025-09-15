@@ -13,7 +13,6 @@ const HeaderDashboard = () => {
     { name: "Dashboard", path: "/dashboard" },
     { name: "Games", path: "/games" },
     { name: "Parents", path: "/parents" },
-    { name: "About Us", path: "/aboutus" },
   ];
 
   return (
