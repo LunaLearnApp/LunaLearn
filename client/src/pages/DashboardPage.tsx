@@ -12,6 +12,7 @@ import { createConfetti } from "@/lib/utils";
 import { Game, Badge, Character } from "@shared/types";
 import { Link } from "wouter";
 import { Loader2, Star, Calendar, Award, BookOpen, Zap, ChevronRight, Clock } from "lucide-react";
+import HeaderDashboard from "@/components/HeaderDashboard";
 
 const DashboardPage = () => {
   const [celebrateRef, setCelebrateRef] = useState<HTMLDivElement | null>(null);
@@ -54,8 +55,10 @@ const DashboardPage = () => {
           content="Track your learning progress, collect rewards, and find new educational games."
         />
       </Helmet>
-      
-      <div className="pt-24 pb-16 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50 relative">
+
+      <HeaderDashboard/>
+
+      <div className="overflow-hidden pt-24 pb-16 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div>

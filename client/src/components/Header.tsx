@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import LoginPage from "../pages/LoginPage";
 
 const Header = () => {
   const [location] = useLocation();
@@ -13,7 +14,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "Quizz", path: "/quizz" },
     { name: "About Us", path: "/aboutus" },
-    
+    { name: "Dashboard", path: "/dashboard"}
   ];
 
   return (
@@ -45,6 +46,7 @@ const Header = () => {
             </Link>
           ))}
         </nav>
+
         
         <div className="flex items-center gap-3">
           <Link href="/login">

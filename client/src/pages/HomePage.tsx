@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
@@ -12,33 +14,36 @@ import AITutorChat from "@/components/AITutorChat";
 import OfflineSupport from "@/components/OfflineSupport";
 import LanguageInclusion from "@/components/LanguageInclusion";
 import WhatsAppIntegration from "@/components/WhatsAppIntegration";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   return (
     <>
-      <Helmet>
+        <Helmet>
         <title>LunaLearn - Fun Learning Games for Kids</title>
         <meta
-          name="description"
-          content="Interactive educational games designed by education experts and powered by AI to make learning exciting for grades 1-7. Featuring offline support, language inclusivity, and WhatsApp integration."
+            name="description"
+            content="Interactive educational games designed by education experts and powered by AI to make learning exciting for grades 1-7. Featuring offline support, language inclusivity, and WhatsApp integration."
         />
-      </Helmet>
-
-      <HeroSection />
-      <Hero />
-      <SubjectCategories />
-      <AITutorChat />
-      <Features />
-      <CharacterGuides />
-      <LanguageInclusion />
-      <OfflineSupport />
-      <GameLibrary />
-      <Achievements />
-      <ParentSection />
-      <HowItWorks />
-      <CallToAction />
-      <WhatsAppIntegration />
+        </Helmet>
+        <Header/>
+        <HeroSection />
+        <Hero />
+        <SubjectCategories />
+        <AITutorChat />
+        <Features />
+        <CharacterGuides />
+        <LanguageInclusion />
+        <OfflineSupport />
+        <GameLibrary />
+        <Achievements />
+        <ParentSection />
+        <HowItWorks />
+        <CallToAction />
+        <WhatsAppIntegration />
+        <Footer/>
     </>
   );
 };

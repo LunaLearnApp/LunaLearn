@@ -10,7 +10,7 @@ const CallToAction = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/dashboard">
-            <Button className="bg-white text-primary font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 duration-300 text-lg">
+            <Button className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-primary transition-all hover:-translate-y-1 duration-300 text-lg">
               Get Started Free
             </Button>
           </Link>

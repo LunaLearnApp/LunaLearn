@@ -13,6 +13,8 @@ import { getSubjectColor, formatGradeLevel, createConfetti } from "@/lib/utils";
 import { Game, Character } from "@shared/types";
 import { Star, Clock, ArrowLeft, Play, Award, Share2, Bookmark, BookOpen, Brain, Target, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import HeaderDashboard from "@/components/HeaderDashboard";
+
 
 const GameDetailPage = () => {
   const [, setLocation] = useLocation();
@@ -92,6 +94,9 @@ const GameDetailPage = () => {
           content={game.description}
         />
       </Helmet>
+
+        <HeaderDashboard/>
+      
       
       <div ref={setConfettiContainer} className="pt-24 pb-10 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 relative">
         <div className="container mx-auto px-4">

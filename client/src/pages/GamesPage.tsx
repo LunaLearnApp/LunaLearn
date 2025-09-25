@@ -7,6 +7,8 @@ import { cn, getGradeColor, getSubjectColor } from "@/lib/utils";
 import { Helmet } from "react-helmet";
 import { Game } from "@shared/types";
 import { Loader2 } from "lucide-react";
+import HeaderDashboard from "@/components/HeaderDashboard";
+
 
 // Mock games array — outside the component
 const mockGames: Game[] = [
@@ -137,6 +139,9 @@ const GamesPage = () => {
           content="Explore our collection of fun educational games designed to make learning exciting for grades K-6."
         />
       </Helmet>
+
+        <HeaderDashboard/>
+        
 
       <div className="pt-24 pb-16 bg-gradient-to-br from-pink-50 via-blue-50 to-purple-50 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">

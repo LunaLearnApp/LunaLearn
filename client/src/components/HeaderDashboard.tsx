@@ -12,6 +12,7 @@ const HeaderDashboard = () => {
   const navLinks = [
     { name: "Dashboard", path: "/dashboard" },
     { name: "Games", path: "/games" },
+    { name: "Game Library", path: "/gamesdetails"},
     { name: "Parents", path: "/parents" },
   ];
 

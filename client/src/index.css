@@ -117,3 +117,28 @@
 .font-comic {
   font-family: 'Comic Neue', cursive;
 }
+
+.form-control {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dddddd;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  transition: all ease-in-out 0.4s;
+}
+
+.form-control:hover,
+.form-control:focus {
+  border-bottom-color: #c9c9c9;
+}
+
+input{
+  height: 45px;
+}
+
+input::placeholder{
+  color: #ffffff;
+}

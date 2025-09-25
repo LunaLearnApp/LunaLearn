@@ -4,18 +4,18 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
 import AboutUsPage from "@/pages/AboutUsPage";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import LoginPage from "@/pages/LoginPage";
 import SignupPage from "@/pages/SignupPage";
 import QuizzPage from "@/pages/QuizzPage";
-import { LogIn } from "lucide-react";
-
+import Dashboard from "@/pages/DashboardPage";
+import GamesPage from "@/pages/GamesPage";
+import ParentsPage from "@/pages/ParentsPage";
+import GameDetailPage from "@/pages/GameDetailPage";
+import { Component } from "lucide-react";
 
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-grow">
         <Switch>
           <Route path="/" component={HomePage} />
@@ -23,11 +23,14 @@ function Router() {
           <Route path="/login" component={LoginPage} />
           <Route path="/signup" component={SignupPage} />
           <Route path="/aboutus" component={AboutUsPage}/>
+          <Route path="/dashboard" component={Dashboard}/>
+          <Route path="/games" component={GamesPage}/>
+          <Route path="/parents" component={ParentsPage}/>
+          <Route path="/gamesdetails" component={GameDetailPage}/>
 
           <Route component={NotFound} />
         </Switch>
       </main>
-      <Footer />
     </div>
   );
 }
@@ -35,8 +38,8 @@ function Router() {
 function App() {
   return (
     <TooltipProvider>
-      <Toaster />
-      <Router />
+        <Toaster />
+        <Router />
     </TooltipProvider>
   );
 }

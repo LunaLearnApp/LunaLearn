@@ -4,6 +4,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend, LineChart, Line } from "recharts";
 import { Eye, EyeOff, Settings, Book, Clock, Bell, Lock, Calendar, Lightbulb, ChevronRight } from "lucide-react";
+import HeaderDashboard from "@/components/HeaderDashboard";
+
 
 const sampleData = [
   { name: 'Math', thisWeek: 85, lastWeek: 65 },
@@ -32,7 +34,9 @@ const ParentsPage = () => {
           content="Monitor your child's learning progress, set limits, and view detailed reports."
         />
       </Helmet>
-      
+
+      <HeaderDashboard/>
+
       <div className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-green-50">
         <div className="container mx-auto px-4">
           <h1 className="font-fredoka text-4xl md:text-5xl text-center mb-6">
