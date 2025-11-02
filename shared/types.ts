@@ -26,7 +26,7 @@ export interface Character {
   color: string;
   textColor: string;
   skills: string[];
-  imageUrl?: string;
+  imageUrl?: string[];
 }
 
 export interface Skill {
